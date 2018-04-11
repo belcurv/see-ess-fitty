@@ -43,7 +43,7 @@ bool validInput(string input)
 {
     for (int i = 0, n = strlen(input); i < n; i++)
     {
-        if (!isprint(input[i]) || isdigit(input[i]))
+        if (!isprint(input[i]) || isdigit(input[i]) || ispunct(input[i]))
         {
             return false;
         }
