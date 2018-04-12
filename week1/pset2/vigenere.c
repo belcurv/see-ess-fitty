@@ -117,7 +117,7 @@ void printCypher(string k, string str_in)
     // iterate over str_in, parsing plaintext chars to cyphertext chars
     for (int i = 0, n = strlen(str_in); i < n; i++)
     {
-        // ignore non-alpha chars; do NOT increment k_counter
+        // ignore non-alpha chars & do NOT increment k_counter
         if (!isalpha(str_in[i]))
         {
             printf("%c", str_in[i]);
@@ -125,7 +125,6 @@ void printCypher(string k, string str_in)
         // encypher alphas & incrment k_counter
         else
         {
-            // parse alpha chars
             char k_char = k[k_counter % strlen(k)];            // get key char @ counter ind, mod k length
             int k_ascii = (int) k_char;                        // get ascii # of key char
             int p_ascii = (int) str_in[i];                     // get plaintext char ascii
