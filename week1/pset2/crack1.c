@@ -22,13 +22,13 @@
 //    anushree:50xcIMJ0y.RXo  YES   (took 67878 tries)
 //    brian:50mjprEcqC/ts     CA    (took 156 tries)
 //    bjbrown:50GApilQSG3E2   UPenn (took 155879607 tries)
-//    lloyd:50n0AAUD.pL8g     lloyd (took TBD tries)
-//    malan:50CcfIk1QrPr6     maybe (took TBD tries)
-//    maria:509nVI8B9VfuA     TF    (took TBD tries)
-//    natmelo:50JIIyhDORqMU   nope  (took TBD tries)
-//    rob:50JGnXUgaafgc       ROFL  (took TBD tries)
-//    stelios:51u8F0dkeDSbY   NO    (took TBD tries)
-//    zamyla:50cI2vYkF0YU2    LOL   (took TBD tries)
+//    lloyd:50n0AAUD.pL8g     lloyd (took 283298057 tries)
+//    malan:50CcfIk1QrPr6     maybe (took 289088830 tries)
+//    maria:509nVI8B9VfuA     TF    (took 1045 tries)
+//    natmelo:50JIIyhDORqMU   nope  (took 5737398 tries)
+//    rob:50JGnXUgaafgc       ROFL  (took 2571827 tries)
+//    stelios:51u8F0dkeDSbY   NO    (took 742 tries)
+//    zamyla:50cI2vYkF0YU2    LOL   (took 33239 tries)
 //
 ///////////////////////////////////////////////////////////////////////////////
 
