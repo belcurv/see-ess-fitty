@@ -65,6 +65,15 @@ int fact(int n)
 }
 ```
 
+This also works: ternary expressions
+
+```C
+int fact_ternary(int n)
+{
+  return (n == 1) ? 1 : n * fact_ternary(n - 1);
+}
+```
+
 #### Loops, wherefore art thou
 
 In general, but not always, a recusive function can replace a loop in a non-recursive function. The iterative version of the above:
@@ -79,5 +88,29 @@ int fact2(int n)
     n--;
   }
   return product;
+}
+```
+
+### COllatz Conjecture
+
+Applies to positive integers and speculates that it is always possible to get back to 1 if you follow these steps:
+
+1.  If _n_ is 1, stop.
+2.  Otherwise, if _n_ is even, repeat this process on _n/2_
+3.  Otherwise, if _n_ is odd, repeat this process on _3n + 1_
+
+Challenge:
+
+Write a recusive function `collatz(n)` that calculates how many steps it takes to get to 1 if you start from -n- and recurse as indicated above.
+
+```
+int collatz(int n)
+{
+  if (n == 1)
+    return 0;
+  else if (n % 2 == 0)
+    return 1 + collatz(n / 2);
+  else
+    return 1 + collatz(3 * n + 1);
 }
 ```
