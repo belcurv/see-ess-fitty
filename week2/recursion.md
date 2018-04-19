@@ -91,7 +91,7 @@ int fact2(int n)
 }
 ```
 
-### COllatz Conjecture
+### Collatz Conjecture
 
 Applies to positive integers and speculates that it is always possible to get back to 1 if you follow these steps:
 
