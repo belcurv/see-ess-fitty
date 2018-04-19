@@ -2,6 +2,16 @@
 
 Cool visualization: https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
 
+Main idea: sort smaller arrays and then combine those arrays together (merge them) in sorted order. Merge sort leverages **recursion**.
+
+In pseudocode:
+
+* Sort the left half of the array (assuming _n > 1_)
+* Sort the right have of the array (assuming _n > 1_)
+* Merge the two halves together
+
+For example, instead of thinking about 1 6-element array, envision 6 1-element arrays and then we recombine them in the correct order.
+
 Before we implement merge sort, see example of iteratively summing integers in `sigma0.c`. The program adds up all the numbers from 1 to the number provided as input, using a function `sigma`, that in turn uses a for loop to make a sum.
 
 Contrast with `sigma1.c` which uses recursion to achieve the same.
@@ -15,7 +25,7 @@ int sigma(int m)
     }
     else
     {
-        return (m + sigma_recr(m - 1));
+        return (m + sigma(m - 1));
         
         // In effect, the above says
         //   "return `m` + the sum of everything below it."
@@ -69,3 +79,7 @@ on input of n elements
     sort right half of elements  // T(n/2)
     merge sorted halves          // O(n)
 ```
+
+**Worst-case scenario**: we have to split _n_ elements up and then recombine them, effectively doubling the sorted subarrays as we build them up. (Conbining sorted 1-element arrays into 2-element arrays, combining sorted 2-element arrays into 4-element arrays...). So for _n_ element array, we have _log n_ subarrays. This is faster than other sorting algorithms in average and worst case scenarios. Complexity = O(_n log n_)
+
+**Best-case scenario**: the array is already perfectly sorted. But we still have to split and recombine it back together with this algorithm. This can be slower then bubble sort in this case. Ω(_n log n_)
