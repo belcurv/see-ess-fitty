@@ -19,3 +19,37 @@ Need to keep track of `target`, `start_index`, `end_index`, and `middle_index` v
 Worst-case scenario: We have to divide the list of `n` elements in half repeatedly to find the target element, either because the target element will be found at the end of the last division or it doesn't exist in the array at all. Complexity = O(log n)
 
 Best-case scenario: The target element is at the midpoint of the full array, so we can stop looking immediately after we start. Ω(1) (constant time).
+
+----------
+
+In JavaScript
+
+```js
+/**
+ *  Recursive binary search
+ *  @param   {any}     target      The array value we're searching for
+ *  @param   {Array}   list        Array to be searched
+ *  @param   {Number}  start_indx  Start index of search range. Default = 0
+ *  @param   {Number}  end_indx    End index of search range. Default = list length
+ *  @returns {Number}              Index of target if found, else -1
+*/
+function searchRecursive(target, list, start_indx = 0, end_indx = list.length - 1) {
+
+  if (!Array.isArray(list)) { return -1; }
+  
+  let mid_indx = Math.floor(((end_indx - start_indx) / 2) + start_indx);
+  
+  switch (true) {
+    case end_indx - start_indx === 0:
+      return -1;
+    case list[mid_indx] === target:
+      return mid_indx;
+    case list[mid_indx] < target:
+     	return searchRecursive(target, list, mid_indx + 1, end_indx);
+    case list[mid_indx] > target:
+     	return searchRecursive(target, list, start_indx, mid_indx);
+    default:
+     	return -1;
+  }
+}
+```
