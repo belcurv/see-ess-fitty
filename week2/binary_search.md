@@ -45,11 +45,11 @@ function searchRecursive(target, list, start_indx = 0, end_indx = list.length - 
     case list[mid_indx] === target:
       return mid_indx;
     case list[mid_indx] < target:
-     	return searchRecursive(target, list, mid_indx + 1, end_indx);
+      return searchRecursive(target, list, mid_indx + 1, end_indx);
     case list[mid_indx] > target:
-     	return searchRecursive(target, list, start_indx, mid_indx);
+      return searchRecursive(target, list, start_indx, mid_indx);
     default:
-     	return -1;
+      return -1;
   }
 }
 ```
